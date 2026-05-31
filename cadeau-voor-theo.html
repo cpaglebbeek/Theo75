@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cadeautjes &mdash; alleen voor Theo</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-cadeau">
+  <header class="page-header">
+    <p class="kicker">Alleen voor Theo</p>
+    <h1>Cadeautjes</h1>
+    <p class="subtitle">Welkom, jubilaris. Pak ze uit op je eigen tempo.</p>
+  </header>
+
+  <main>
+    <section id="gate" class="gate">
+      <h2>Even verifiëren</h2>
+      <p>Dit deel is alleen voor jou, Theo. Christian heeft je de toegangswoord gegeven.</p>
+      <form id="gateform" class="gateform" autocomplete="off">
+        <label>
+          <span>Wachtwoord</span>
+          <input type="password" id="gatecode" name="gatecode" required autofocus placeholder="&hellip;">
+        </label>
+        <button type="submit">Open</button>
+        <p class="gate-msg" id="gate-msg" hidden>Niet juist &mdash; probeer nog eens.</p>
+      </form>
+    </section>
+
+    <section id="presents" class="presents" hidden>
+      <p class="hint" id="presents-hint">Klik om uit te pakken &mdash; je kunt ze daarna sluiten en later weer openen.</p>
+      <div class="presents-grid" id="presents-grid" aria-busy="true">
+        <p class="loading">Cadeautjes laden&hellip;</p>
+      </div>
+      <p id="presents-empty" hidden>
+        <em>Nog geen cadeautjes ingepakt. Kom later terug.</em>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 &middot; Theo&nbsp;75 &middot; <span class="version">v0.1.0-Robijn</span></p>
+  </footer>
+
+  <script src="assets/js/cadeau.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+[Unit]
+Description=Theo75 gastenboek-backend (ouwelul)
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/ouwelul/server
+Environment=PORT=3989
+Environment=DATA_DIR=/var/lib/ouwelul
+ExecStart=/usr/bin/node /opt/ouwelul/server/server.js
+Restart=on-failure
+RestartSec=3
+StandardOutput=append:/var/log/ouwelul-guestbook.log
+StandardError=append:/var/log/ouwelul-guestbook.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,11 @@
+{
+  "name": "ouwelul-guestbook",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Theo75 gastenboek-backend (zero-deps Node).",
+  "main": "server.js",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

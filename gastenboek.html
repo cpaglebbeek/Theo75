@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Feliciteer Theo &mdash; Theo 75</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-gastenboek">
+  <header class="page-header">
+    <p class="kicker">Theo&nbsp;75</p>
+    <h1>Feliciteer Theo</h1>
+    <p class="subtitle">Laat een berichtje achter &mdash; hij leest ze allemaal.</p>
+  </header>
+
+  <nav class="primary-nav" aria-label="Hoofdmenu">
+    <ul>
+      <li><a href="index.html">Cover</a></li>
+      <li><a href="gastenboek.html" aria-current="page">Feliciteer Theo</a></li>
+      <li><a href="tijdlijn.html">Tijdlijn</a></li>
+      <li><a href="anekdotes.html">Anekdotes</a></li>
+      <li><a href="fotos.html">Foto's</a></li>
+      <li><a href="quotes.html">Quotes</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <form id="signform" class="signform" autocomplete="on">
+      <label>
+        <span>Van</span>
+        <input type="text" name="name" maxlength="60" required placeholder="Jouw naam">
+      </label>
+      <label>
+        <span>Felicitatie</span>
+        <textarea name="message" maxlength="500" required rows="4" placeholder="Geef Theo een knipoog, een quote, of gewoon een dikke gefeliciteerd."></textarea>
+      </label>
+      <button type="submit" id="signbtn">Plaats</button>
+      <p class="signform-msg" id="signform-msg" hidden></p>
+    </form>
+
+    <section class="signs" aria-label="Felicitaties">
+      <h2>Felicitaties</h2>
+      <ul id="signs-list" aria-busy="true">
+        <li class="loading">Felicitaties laden&hellip;</li>
+      </ul>
+      <p id="signs-empty" hidden>
+        <em>Nog niemand heeft Theo gefeliciteerd. Wees jij de eerste!</em>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 &middot; Theo&nbsp;75 &middot; <span class="version">v0.1.0-Robijn</span></p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/guestbook.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "_doc": "Cadeautjes voor Theo. Velden: title (verplicht), from (optioneel), body (Markdown-light, mag <br> bevatten), color (optioneel: rood/groen/blauw/goud/zilver).",
+  "items": [
+    {
+      "title": "Een eerste hand",
+      "from": "Christian",
+      "color": "goud",
+      "body": "Welkom in de zevende decade-plus-vijf, ouwe vriend. Dit is jouw plek &mdash; pak rustig één voor één uit. Er volgen er meer; check af en toe terug."
+    }
+  ]
+}

@@ -3,59 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Theo 75 — Bijzonderheden</title>
-  <meta name="description" content="Een verzameling bijzonderheden ter ere van Theo's 75e verjaardag.">
+  <title>Theo 75 &mdash; vandaag!</title>
+  <meta name="description" content="Theo wordt 75. Tel mee af tot 23:00.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
-<body class="page-cover">
-  <header class="cover">
-    <p class="kicker">Een verzameling bijzonderheden</p>
-    <h1>Theo&nbsp;75</h1>
-    <p class="subtitle">Vijfenzeventig jaar &mdash; een leven in fragmenten.</p>
-  </header>
+<body class="page-landing">
 
-  <nav class="primary-nav" aria-label="Hoofdmenu">
-    <ul>
-      <li><a href="index.html" aria-current="page">Cover</a></li>
-      <li><a href="tijdlijn.html">Tijdlijn</a></li>
-      <li><a href="anekdotes.html">Anekdotes</a></li>
-      <li><a href="fotos.html">Foto's</a></li>
-      <li><a href="quotes.html">Quotes</a></li>
-    </ul>
-  </nav>
+  <div class="landing-bg" aria-hidden="true"></div>
+  <div class="landing-overlay" aria-hidden="true"></div>
 
-  <main class="cover-intro">
-    <section>
-      <h2>Voorwoord</h2>
-      <p data-placeholder>
-        <em>[Voorwoord komt hier &mdash; door Christian in te vullen.]</em>
-      </p>
+  <main class="landing">
+    <header class="landing-header">
+      <p class="kicker">Hij is er &mdash; vandaag</p>
+      <h1>Theo&nbsp;<span class="seventyfive">75</span></h1>
+      <p class="subtitle">Vijfenzeventig jaar &middot; vannacht om 23:00.</p>
+    </header>
+
+    <section class="countdown" id="countdown" aria-live="polite" aria-label="Aftellen tot Theo 75">
+      <div class="cd-unit"><span class="cd-num" id="cd-days">--</span><span class="cd-lbl">dagen</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit"><span class="cd-num" id="cd-hours">--</span><span class="cd-lbl">uren</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit"><span class="cd-num" id="cd-mins">--</span><span class="cd-lbl">minuten</span></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-unit"><span class="cd-num" id="cd-secs">--</span><span class="cd-lbl">seconden</span></div>
     </section>
 
-    <section class="cover-cards">
-      <a class="card" href="tijdlijn.html">
-        <h3>Tijdlijn</h3>
-        <p>Vijfenzeventig jaar in mijlpalen.</p>
-      </a>
-      <a class="card" href="anekdotes.html">
-        <h3>Anekdotes</h3>
-        <p>Verhalen die blijven hangen.</p>
-      </a>
-      <a class="card" href="fotos.html">
-        <h3>Foto's</h3>
-        <p>Beelden door de jaren heen.</p>
-      </a>
-      <a class="card" href="quotes.html">
-        <h3>Quotes</h3>
-        <p>Wat anderen over Theo zeggen.</p>
-      </a>
-    </section>
+    <p class="countdown-msg" id="countdown-msg" hidden>
+      <span class="hooray">PROOST&nbsp;THEO!</span><br>
+      <span class="hooray-sub">Vijfenzeventig &mdash; en geen dag te oud.</span>
+    </p>
+
+    <nav class="primary-nav landing-nav" aria-label="Hoofdmenu">
+      <ul>
+        <li><a href="index.html" aria-current="page">Cover</a></li>
+        <li><a href="gastenboek.html">Feliciteer Theo</a></li>
+        <li><a href="tijdlijn.html">Tijdlijn</a></li>
+        <li><a href="anekdotes.html">Anekdotes</a></li>
+        <li><a href="fotos.html">Foto's</a></li>
+        <li><a href="quotes.html">Quotes</a></li>
+      </ul>
+    </nav>
   </main>
 
-  <footer>
-    <p>&copy; 2026 &middot; Theo&nbsp;75 &middot; <span class="version">v0.0.1-Diamant</span></p>
+  <canvas id="confetti" aria-hidden="true"></canvas>
+  <div id="balloons" class="balloons" aria-hidden="true"></div>
+
+  <footer class="landing-footer">
+    <p>&copy; 2026 &middot; Theo&nbsp;75 &middot; <span class="version">v0.1.0-Robijn</span></p>
   </footer>
 
   <script src="assets/js/main.js" defer></script>
+  <script src="assets/js/celebrate.js" defer></script>
 </body>
 </html>
