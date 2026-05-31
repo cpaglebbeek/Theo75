@@ -110,12 +110,63 @@
       $("#gallery-empty").hidden = false;
       return;
     }
-    gal.innerHTML = data.items.map((it) => `
-      <figure>
+    gal.innerHTML = data.items.map((it, i) => `
+      <figure data-idx="${i}">
         <img src="${esc(it.src)}" alt="${esc(it.alt || it.caption || "")}" loading="lazy">
         ${it.caption ? `<figcaption>${esc(it.caption)}</figcaption>` : ""}
       </figure>
     `).join("");
+    attachLightbox(gal, data.items);
+  }
+
+  function attachLightbox(gal, items) {
+    let box = document.getElementById("lightbox");
+    if (!box) {
+      box = document.createElement("div");
+      box.id = "lightbox";
+      box.setAttribute("hidden", "");
+      box.innerHTML = `
+        <button class="lb-close" aria-label="Sluit">×</button>
+        <button class="lb-prev" aria-label="Vorige">‹</button>
+        <img class="lb-img" alt="">
+        <button class="lb-next" aria-label="Volgende">›</button>
+        <p class="lb-caption"></p>
+      `;
+      document.body.appendChild(box);
+    }
+    const img  = box.querySelector(".lb-img");
+    const cap  = box.querySelector(".lb-caption");
+    let cur = 0;
+
+    function show(i) {
+      cur = (i + items.length) % items.length;
+      const it = items[cur];
+      img.src = it.src;
+      img.alt = it.alt || it.caption || "";
+      cap.textContent = it.caption || "";
+      box.hidden = false;
+      document.body.style.overflow = "hidden";
+    }
+    function hide() {
+      box.hidden = true;
+      img.src = "";
+      document.body.style.overflow = "";
+    }
+
+    gal.querySelectorAll("figure").forEach((fig) => {
+      fig.style.cursor = "zoom-in";
+      fig.addEventListener("click", () => show(Number(fig.dataset.idx)));
+    });
+    box.querySelector(".lb-close").onclick = hide;
+    box.querySelector(".lb-prev").onclick  = () => show(cur - 1);
+    box.querySelector(".lb-next").onclick  = () => show(cur + 1);
+    box.addEventListener("click", (e) => { if (e.target === box) hide(); });
+    document.addEventListener("keydown", (e) => {
+      if (box.hidden) return;
+      if (e.key === "Escape")    hide();
+      if (e.key === "ArrowLeft") show(cur - 1);
+      if (e.key === "ArrowRight")show(cur + 1);
+    });
   }
 
   // -- Quotes ------------------------------------------------------------

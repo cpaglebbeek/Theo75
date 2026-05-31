@@ -151,7 +151,7 @@
     }, 3000);
   }
 
-  function explode() {
+  function fullExplosion() {
     const host = $("#balloons");
     const canvas = $("#confetti");
     if (host) {
@@ -166,6 +166,30 @@
     }
     if (canvas) confetti(canvas, 7000);
     playAnthem();
+  }
+
+  function showStartGate() {
+    if (document.getElementById("startgate")) return;
+    const gate = document.createElement("div");
+    gate.id = "startgate";
+    gate.innerHTML = `
+      <button type="button" id="startbtn">
+        <span class="startbtn-balloon">🎈</span>
+        <span class="startbtn-text">Tik hier om Theo te vieren</span>
+        <span class="startbtn-balloon">🎈</span>
+      </button>
+      <p class="startgate-hint">Met geluid (Iron Butterfly).</p>
+    `;
+    document.body.appendChild(gate);
+    document.getElementById("startbtn").addEventListener("click", () => {
+      gate.remove();
+      fullExplosion();
+    }, { once: true });
+  }
+
+  // explode = entry-point; toont eerst de klik-gate (vereist voor audio-autoplay).
+  function explode() {
+    showStartGate();
   }
 
   // preview-mode via ?fire=1

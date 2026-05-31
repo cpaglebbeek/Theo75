@@ -1,4 +1,17 @@
 {
   "_doc": "Foto-galerij. Velden: src (pad t.o.v. site-root, bv. 'assets/photos/theo_1972_bruiloft.jpg'), alt (verplicht voor toegankelijkheid), caption (optioneel).",
-  "items": []
+  "items": [
+    { "src": "assets/photos/20161225_151957.jpg", "alt": "Theo met Anika rond de kerstdagen", "caption": "Kerstmis — moment met Anika" },
+    { "src": "assets/photos/20171109_172330.jpg", "alt": "Theo in herfstkleuren", "caption": "Herfstdagen" },
+    { "src": "assets/photos/HF-Christiaan-062.jpg", "alt": "Theo op het landgoed", "caption": "Een moment van rust" },
+    { "src": "assets/photos/IMAG0257.jpg", "alt": "Theo in zijn leerjaren als docent", "caption": "De voormalig leraar" },
+    { "src": "assets/photos/IMG-20170904-WA0007.jpg", "alt": "Theo met Anika op school", "caption": "Opa en kleinkind — 2017" },
+    { "src": "assets/photos/IMG-20191102-WA0001.jpg", "alt": "Theo buiten — herfst 2019", "caption": "Novemberdag" },
+    { "src": "assets/photos/IMG-20230318-WA0013.jpg", "alt": "Theo lachend", "caption": "Licht moment — maart 2023" },
+    { "src": "assets/photos/IMG-20230319-WA0005.jpg", "alt": "Theo en gezelschap", "caption": "Samen zijn — 2023" },
+    { "src": "assets/photos/IMG-20230827-WA0013.jpg", "alt": "Theo zomerdag", "caption": "Augustus 2023" },
+    { "src": "assets/photos/IMG-20240211-WA0001.jpg", "alt": "Theo recenter", "caption": "Februari 2024" },
+    { "src": "assets/photos/IMG-20240220-WA0007.jpg", "alt": "Theo — voorjaar 2024", "caption": "Een dag in het voorjaar" },
+    { "src": "assets/photos/OI000021.jpg", "alt": "Theo — herinnering", "caption": "Een moment in het archief" }
+  ]
 }

@@ -298,6 +298,62 @@ main, .cover, .page-header, footer:not(.landing-footer) {
 }
 #anthem-close:hover { background: rgba(243, 201, 122, .15); }
 
+/* Start-gate (vereist één klik om audio-autoplay te ontgrendelen) */
+#startgate {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, .55);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  animation: gateFadeIn .4s ease-out;
+}
+@keyframes gateFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+#startbtn {
+  background: linear-gradient(135deg, #a61c2d 0%, #870e1f 100%);
+  color: #fff;
+  border: 2px solid #f3c97a;
+  padding: 1.2rem 2.4rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  letter-spacing: .03em;
+  border-radius: 60px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: .8rem;
+  box-shadow: 0 8px 40px rgba(243, 201, 122, .35), 0 0 80px rgba(243, 201, 122, .15);
+  animation: startPulse 2s ease-in-out infinite;
+}
+#startbtn:hover { transform: scale(1.04); }
+.startbtn-balloon {
+  font-size: 1.6em;
+  animation: startBalloonBob 1.5s ease-in-out infinite alternate;
+}
+.startbtn-balloon:last-child { animation-delay: .35s; }
+@keyframes startBalloonBob {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-6px); }
+}
+@keyframes startPulse {
+  0%, 100% { box-shadow: 0 8px 40px rgba(243, 201, 122, .35), 0 0 80px rgba(243, 201, 122, .15); }
+  50%      { box-shadow: 0 8px 50px rgba(243, 201, 122, .6),  0 0 120px rgba(243, 201, 122, .35); }
+}
+.startgate-hint {
+  margin-top: 1rem;
+  font-family: var(--font-sans);
+  font-size: .85rem;
+  color: #e9dec6;
+  letter-spacing: .04em;
+}
+
 /* ============================================================
    GENERIEKE SUBPAGINA STIJL
    ============================================================ */
@@ -560,4 +616,78 @@ footer .version { font-variant: small-caps; letter-spacing: .1em; }
   .cd-unit { background: #f7f4ec; color: var(--ink); }
   .cd-num, .cd-sep { color: var(--ink); }
   a { color: var(--ink); text-decoration: none; }
+}
+
+/* -- Lightbox (foto-vergroting) ------------------------------------ */
+#lightbox {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,.92);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  animation: lb-fade .15s ease-out;
+}
+#lightbox[hidden] { display: none; }
+@keyframes lb-fade { from { opacity: 0; } to { opacity: 1; } }
+
+#lightbox .lb-img {
+  max-width: 92vw; max-height: 82vh;
+  object-fit: contain;
+  box-shadow: 0 12px 40px rgba(0,0,0,.6);
+  border-radius: 4px;
+}
+#lightbox .lb-caption {
+  color: #f3c97a;
+  margin-top: 16px;
+  font-size: 1rem;
+  text-align: center;
+  max-width: 80vw;
+}
+#lightbox button {
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 50%;
+  width: 48px; height: 48px;
+  font-size: 28px; line-height: 1;
+  cursor: pointer;
+  transition: background .15s, transform .15s;
+}
+#lightbox button:hover { background: rgba(255,255,255,.15); transform: scale(1.08); }
+#lightbox .lb-close { top: 16px;   right: 16px; }
+#lightbox .lb-prev  { top: 50%; left: 16px;  transform: translateY(-50%); }
+#lightbox .lb-next  { top: 50%; right: 16px; transform: translateY(-50%); }
+#lightbox .lb-prev:hover { transform: translateY(-50%) scale(1.08); }
+#lightbox .lb-next:hover { transform: translateY(-50%) scale(1.08); }
+
+@media (max-width: 600px) {
+  #lightbox .lb-prev, #lightbox .lb-next { width: 40px; height: 40px; font-size: 22px; }
+}
+
+.gallery figure { transition: transform .15s; }
+.gallery figure:hover { transform: scale(1.02); }
+
+/* -- Tracking banner onderaan (transparantie) ---------------------- */
+#t75-banner {
+  position: fixed; left: 0; right: 0; bottom: 0;
+  z-index: 900;
+  background: rgba(20,20,20,.92);
+  color: #f3c97a;
+  padding: 10px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-size: .8rem;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+  border-top: 1px solid rgba(243,201,122,.25);
+  backdrop-filter: blur(6px);
+}
+#t75-banner span { max-width: 720px; text-align: center; line-height: 1.4; }
+#t75-banner button {
+  background: transparent; color: #f3c97a;
+  border: 1px solid rgba(243,201,122,.4); border-radius: 50%;
+  width: 28px; height: 28px; font-size: 18px; line-height: 1;
+  cursor: pointer; flex-shrink: 0;
+}
+#t75-banner button:hover { background: rgba(243,201,122,.15); }
+@media (max-width: 600px) {
+  #t75-banner { font-size: .72rem; padding: 8px 12px; }
 }

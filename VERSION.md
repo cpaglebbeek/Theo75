@@ -1,5 +1,18 @@
 # Versies — Theo75
 
+## v0.2.0-Smaragd (2026-06-01, **LIVE** — verjaardag)
+- **12 echte foto's van Theo** in galerij (`content/fotos.json` ingevuld vanuit bugcheck-upload)
+- **Lightbox** op `fotos.html` — klik thumbnail → full-screen overlay; ESC + pijltjes + prev/next knoppen
+- **Autonome felicitatie-relay** op HC55 (eindigt afhankelijkheid van Mac):
+  - WhatsApp Bridge (Go) gecompileerd + gepaird met +31634199292 — service `whatsapp-bridge.service`
+  - `theo-poller.service` — polt elke 30s `/var/lib/ouwelul/guestbook.jsonl`, stuurt nieuwe entries via WhatsApp (`/api/send` :8080) + Gmail SMTP (joycekaag → Theo via 587/STARTTLS)
+- **Bezoek-tracker** (eenmalige uitzondering op no-tracking regel):
+  - `assets/js/tracking.js` — cookie `t75_sid` (1j), events: pageview, click, scroll-25/50/75/100, lightbox-keys, form-submit, visibility, pageleave
+  - `theo-tracker.service` (Node :3886) → `/var/lib/ouwelul/tracker.jsonl`
+  - `theo-reporter.timer` (per uur) → HTML-rapport naar cglebbeek + tvanscheppingen (sessies + geolocatie + UA + per-pagina events)
+  - Transparantie-banner onderaan elke pagina
+- Eerste echte felicitatie van **Melek** (buurman) om 23:02 op 31-5
+
 ## v0.1.0-Robijn (2026-05-31, **LIVE**)
 - **LIVE** op https://horsecloud55.ddns.net/ouwelul/ (en via DNS-forward ouwelul.to)
 - Nieuwe **cover-landing**: vol-bleed zwart/wit cover-foto + groot "Theo 75" titel
