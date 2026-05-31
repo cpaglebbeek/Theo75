@@ -1,0 +1,7 @@
+{
+  "_doc": "Tijdlijn van bijzonderheden. Voeg objecten toe aan 'items'. Velden: year (getal of string), event (verplicht), note (optioneel).",
+  "items": [
+    { "year": 1951, "event": "Geboorte", "note": "(placeholder — pas geboortejaar aan)" },
+    { "year": 2026, "event": "75 jaar — deze website" }
+  ]
+}

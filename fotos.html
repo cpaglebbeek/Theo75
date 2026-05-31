@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="nl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Foto's &mdash; Theo 75</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="page-fotos">
+  <header class="page-header">
+    <p class="kicker">Theo&nbsp;75</p>
+    <h1>Foto's</h1>
+  </header>
+
+  <nav class="primary-nav" aria-label="Hoofdmenu">
+    <ul>
+      <li><a href="index.html">Cover</a></li>
+      <li><a href="tijdlijn.html">Tijdlijn</a></li>
+      <li><a href="anekdotes.html">Anekdotes</a></li>
+      <li><a href="fotos.html" aria-current="page">Foto's</a></li>
+      <li><a href="quotes.html">Quotes</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <p class="hint">
+      Bestandsnaam-conventie: <code>theo_&lt;jaar&gt;_&lt;slug&gt;.jpg</code> in <code>assets/photos/</code>.
+      Vermeldingen in <code>content/fotos.json</code> &mdash; ondertitels optioneel.
+    </p>
+
+    <section class="gallery" id="gallery" aria-busy="true">
+      <p class="loading">Galerij laden&hellip;</p>
+    </section>
+    <p id="gallery-empty" hidden>
+      <em>Nog geen foto's. Bewerk <code>content/fotos.json</code>.</em>
+    </p>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 &middot; Theo&nbsp;75 &middot; <span class="version">v0.0.1-Diamant</span></p>
+  </footer>
+
+  <script src="assets/js/main.js" defer></script>
+</body>
+</html>
