@@ -243,6 +243,61 @@ main, .cover, .page-header, footer:not(.landing-footer) {
   z-index: 6;
 }
 
+/* In-A-Gadda-Da-Vida anthem player */
+#anthem {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 8;
+  width: 320px;
+  max-width: calc(100vw - 2rem);
+  background: rgba(0, 0, 0, .85);
+  border: 1px solid rgba(243, 201, 122, .35);
+  border-radius: 10px;
+  padding: .5rem;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, .55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+#anthem-frame {
+  display: block;
+  width: 100%;
+  height: 80px;
+  border: 0;
+  border-radius: 6px;
+  background: #000;
+}
+#anthem-replay {
+  display: block;
+  width: 100%;
+  margin-top: .5rem;
+  padding: .5rem .8rem;
+  background: var(--robijn);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: .04em;
+  cursor: pointer;
+}
+#anthem-replay:hover { background: #870e1f; }
+#anthem-close {
+  position: absolute;
+  top: .25rem;
+  right: .35rem;
+  width: 24px;
+  height: 24px;
+  border: 0;
+  background: transparent;
+  color: #f3c97a;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  border-radius: 50%;
+}
+#anthem-close:hover { background: rgba(243, 201, 122, .15); }
+
 /* ============================================================
    GENERIEKE SUBPAGINA STIJL
    ============================================================ */

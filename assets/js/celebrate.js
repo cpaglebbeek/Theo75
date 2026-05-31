@@ -3,7 +3,10 @@
   "use strict";
 
   // 23:00 CEST op 31 mei 2026 = 21:00 UTC
-  const TARGET = new Date("2026-05-31T23:00:00+02:00").getTime();
+  // Overschrijfbaar via window.THEO75_TARGET (gebruikt door /ouwelul/test.html).
+  const TARGET = (typeof window.THEO75_TARGET === "number")
+    ? window.THEO75_TARGET
+    : new Date("2026-05-31T23:00:00+02:00").getTime();
 
   const $ = (s) => document.querySelector(s);
   const elDays = $("#cd-days"), elHrs = $("#cd-hours"),
@@ -116,6 +119,38 @@
     requestAnimationFrame(frame);
   }
 
+  function playAnthem() {
+    if (document.getElementById("anthem")) return; // idempotent
+    const wrap = document.createElement("div");
+    wrap.id = "anthem";
+    wrap.innerHTML = `
+      <iframe id="anthem-frame"
+        title="In-A-Gadda-Da-Vida — Iron Butterfly"
+        src="https://www.youtube.com/embed/UIVe-rZBcm4?autoplay=1&playsinline=1&rel=0"
+        allow="autoplay; encrypted-media; picture-in-picture"
+        allowfullscreen></iframe>
+      <button type="button" id="anthem-replay" title="Opnieuw afspelen">♫ Klik om af te spelen</button>
+      <button type="button" id="anthem-close" title="Sluit speler" aria-label="Sluit">×</button>
+    `;
+    document.body.appendChild(wrap);
+
+    document.getElementById("anthem-close").addEventListener("click", () => {
+      wrap.remove();
+    });
+    document.getElementById("anthem-replay").addEventListener("click", () => {
+      const f = document.getElementById("anthem-frame");
+      f.src = f.src; // re-trigger autoplay after user gesture
+      document.getElementById("anthem-replay").hidden = true;
+    });
+
+    // Toon de fallback-knop pas na ~3s, als autoplay door browser is geblokkeerd
+    // is dit het pad-zonder-frustratie voor de gebruiker.
+    setTimeout(() => {
+      const btn = document.getElementById("anthem-replay");
+      if (btn) btn.hidden = false;
+    }, 3000);
+  }
+
   function explode() {
     const host = $("#balloons");
     const canvas = $("#confetti");
@@ -130,6 +165,7 @@
       }, 1800);
     }
     if (canvas) confetti(canvas, 7000);
+    playAnthem();
   }
 
   // preview-mode via ?fire=1

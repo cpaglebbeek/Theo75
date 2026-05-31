@@ -1,7 +1,130 @@
 {
-  "_doc": "Tijdlijn van bijzonderheden. Voeg objecten toe aan 'items'. Velden: year (getal of string), event (verplicht), note (optioneel).",
+  "_doc": "Tijdlijn van bijzonderheden in Theo's leven en de vriendschap met Christian. Velden: year (getal of string), event (verplicht), note (optioneel).",
   "items": [
-    { "year": 1951, "event": "Geboorte", "note": "(placeholder — pas geboortejaar aan)" },
-    { "year": 2026, "event": "75 jaar — deze website" }
+    {
+      "year": 1951,
+      "event": "Geboren — 31 mei",
+      "note": "Het begin van een lang en bijzonder leven."
+    },
+    {
+      "year": "ca. 1991",
+      "event": "Theo en Christian leren elkaar kennen",
+      "note": "Christian is ongeveer veertien. Vanaf dat moment loopt Theo bijna onafgebroken mee in zijn leven."
+    },
+    {
+      "year": "jaren '90 — '00",
+      "event": "Docent informatica en natuurkundige",
+      "note": "Theo geeft les. In QuickBasic, GW-BASIC, Visual Basic — talen waarin je nog precies kunt zien hoe de computer denkt."
+    },
+    {
+      "year": 2010,
+      "event": "Eerste digitale sporen samen",
+      "note": "December 2010: de oudste bewaard gebleven mail van Theo aan Christian — '2 foto's'. Een eenvoudige titel die het patroon van vijftien jaar zou worden."
+    },
+    {
+      "year": 2011,
+      "event": "Anika's doop — meelezer en redacteur",
+      "note": "April 2011: Theo redigeert het doopboekje regel voor regel ('komma erbij', 'hoofdletters in', 'lieve... vanaf... harten')."
+    },
+    {
+      "year": 2012,
+      "event": "Met pensioen — 18 september",
+      "note": "Volgens K2026C.BAS, de eigen kalender van Theo. Onder zijn eigen naam: 'Ikke'."
+    },
+    {
+      "year": 2015,
+      "event": "Stoeltje, school, en de eerste BASIC-lessen aan Christian",
+      "note": "November 2015: Theo haalt een stoeltje op voor Anika, gaat naar AllSports, redt een kikker op school, en helpt Christian uren aan een script: 'Komma's en haakjes tellen. Direct en indirect adresseren. AND-en. Logica. Jouw op het lijf geschreven.'"
+    },
+    {
+      "year": 2015,
+      "event": "Eerste leesgrage telegramberichten",
+      "note": "Theo schrijft zoals niemand anders: korte regels, in losse zinnen, zonder vet, zonder cursief — alleen kern."
+    },
+    {
+      "year": 2016,
+      "event": "Pasen op visite — twaalf foto-mails op één dag",
+      "note": "De vroege jaren met Anika: kikkers vouwen, koprollen, knuffels uit de Lidl."
+    },
+    {
+      "year": 2016,
+      "event": "Kerstbrunch in de Jopenkerk",
+      "note": "Eerste kerstdag 2016, half een, voor de ingang. Christian: 'PS: zou iemand deze herinnering aan Theo willen doorsturen?'. Theo: 'Is aangekomen. Tot half een!'"
+    },
+    {
+      "year": 2017,
+      "event": "Anika naar school brengen op vaste dagen",
+      "note": "Theo wordt een vaste schakel in de week: 'Op maandag haal ik haar van school en breng naar Aveen.'"
+    },
+    {
+      "year": 2018,
+      "event": "Paddenstoelen zoeken op Beeckestijn",
+      "note": "7 oktober 2018, Natuurmonumenten-excursie, drie kaartjes. Een herfstochtend op naam."
+    },
+    {
+      "year": 2018,
+      "event": "Bright Day @ Night, samen op stap",
+      "note": "24 november 2018: twee tickets op naam — Theo van Scheppingen + Christian Glebbeek. Lichtkunst van Daan Roosegaarde in Expo Haarlemmermeer."
+    },
+    {
+      "year": 2019,
+      "event": "Basic GPS tracker",
+      "note": "Theo blijft sleutelen in BASIC, ook als 'iedereen' allang naar moderne talen gemigreerd is."
+    },
+    {
+      "year": 2020,
+      "event": "Sneeuwklokjes en het Bosplan",
+      "note": "Februari 2020: 'Is goed. Waar wil je lopen? Sneeuwklokjes? Bosplan?'. Wandelen als vaste taal tussen twee mannen die niet veel hoeven te zeggen."
+    },
+    {
+      "year": 2020,
+      "event": "Eftelingbonnen via de buren van Suze",
+      "note": "Zomer 2020, midden in corona: Theo regelt de kortingskaarten. 'Gelukkig. Eftelingbonnen komen.'"
+    },
+    {
+      "year": 2023,
+      "event": "Parijs — Theo ontvangt het ticket",
+      "note": "Oktober 2023: KLM Amsterdam–Parijs voor Christian, Maryka en Anika. Theo gaat niet mee, maar weet waar ze zijn. Dat is sinds 2010 het patroon."
+    },
+    {
+      "year": 2024,
+      "event": "Sicilië — boardingpass in de mailbox",
+      "note": "Augustus 2024: Amsterdam–Palermo. Opnieuw: Theo ontvangt de gegevens. Niet omdat het moet, maar omdat het zo hoort."
+    },
+    {
+      "year": 2024,
+      "event": "Lid van de gezinsgroep",
+      "note": "29 april 2024: Google Play meldt dat Theo officieel onderdeel is van Joyce's gezinsgroep. Een klein bericht met grote betekenis."
+    },
+    {
+      "year": 2025,
+      "event": "'Ik ben met pensioen... dus ik hoef niet veel meer'",
+      "note": "Mei 2025. Eén zin die Theo perfect typeert — droog, zelfspot, en helemaal niet waar (de BASIC-functies blijven komen)."
+    },
+    {
+      "year": 2025,
+      "event": "Driedimensionale Rubik's Cube — in BASIC",
+      "note": "5 mei 2025: 'In BASIC een functie definiëren met drie variabelen. En dan de waarden invullen: F(m,k,l).' Theo van Scheppingen, 73 jaar, nog steeds wiskunde aan het opbouwen vanaf de eerste regel."
+    },
+    {
+      "year": 2026,
+      "event": "K2026C.BAS — een verjaardagskalender voor 99 mensen",
+      "note": "Januari 2026: Theo schrijft een verjaardagskalender in BASIC. Compileert hem netjes naar Windows-exe. Op de regel voor 31 mei staat: 'Ikke'."
+    },
+    {
+      "year": 2026,
+      "event": "RandomRingtone testen — een hele zaterdagavond lang",
+      "note": "12 april 2026: Theo installeert, crasht, herinstalleert, koppelt playlists, stuurt screenshots. 'App stopt'. 'Ik denk dat ik verder ben'. 'Een keertje uitzoeken als we op locatie zijn.'"
+    },
+    {
+      "year": 2026,
+      "event": "Twee verjaardagen op één zaterdag",
+      "note": "9 mei 2026: 'Ik zou volgende zaterdag eventueel twee verjaardagen kunnen combineren... Laat maar weten.' Praktisch, gul, typisch Theo."
+    },
+    {
+      "year": 2026,
+      "event": "75 jaar — en deze website",
+      "note": "31 mei 2026. Van harte, Theo."
+    }
   ]
 }
