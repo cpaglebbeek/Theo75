@@ -14,7 +14,7 @@
 - Eerste echte felicitatie van **Melek** (buurman) om 23:02 op 31-5
 
 ## v0.1.0-Robijn (2026-05-31, **LIVE**)
-- **LIVE** op https://horsecloud55.ddns.net/ouwelul/ (en via DNS-forward ouwelul.to)
+- **LIVE** op https://icthorsecloud.nl/ouwelul/ (en via DNS-forward ouwelul.to)
 - Nieuwe **cover-landing**: vol-bleed zwart/wit cover-foto + groot "Theo 75" titel
 - **Aftelcounter** naar 2026-05-31T23:00:00+02:00 (dagen/uren/min/sec, tabular nums)
 - **Ballonnen-explosie animatie** bij 00:00 — 70 ballonnen in 2 golven + canvas-confetti (180 stuks)
